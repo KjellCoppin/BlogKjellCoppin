@@ -1,0 +1,17 @@
+name: Build and Run
+on:
+  push:
+    branches:
+      - "AddRunner"
+jobs:
+  build_and_run:
+    name: build and run
+    runs-on: self-hosted
+    steps:
+       - uses: actions/checkout@v4
+       
+       - name: check env
+         run: ls
+
+       - name: check runner
+         run: whoami 
