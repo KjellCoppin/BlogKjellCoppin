@@ -1,8 +1,7 @@
-name: Build and Run
 on:
   push:
     branches:
-      - "AddRunner"
+      - AddRunner
 jobs:
   build_and_run:
     name: build and run
