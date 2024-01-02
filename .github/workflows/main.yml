@@ -13,5 +13,3 @@ jobs:
        - name: check env
          run: ls
 
-       - name: check runner
-         run: whoami 
