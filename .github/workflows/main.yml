@@ -9,8 +9,8 @@ jobs:
     steps:
        - uses: actions/checkout@v4
        
-       - name: check env
-         run: ls 
+       - name: move into project
+         run: cd BlogKjellCoppin
 
-       - name: check machine
-         run: whoami
+       - name: ls
+         run: ls
