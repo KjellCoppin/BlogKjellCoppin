@@ -19,7 +19,7 @@ jobs:
         run: docker run --rm -v $(pwd):/app -w /app build_image
 
       - name: make run image 
-        run: docker build -t run_image -f BlogKjellCoppin/Dockerfile_run publish
+        run: docker build --platform linux/arm64 -t run_image -f BlogKjellCoppin/Dockerfile_run publish
 
       - name: tag run image
         run: docker tag run_image kjellcoppin1/blog:run_image
