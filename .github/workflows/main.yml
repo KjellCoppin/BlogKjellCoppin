@@ -16,7 +16,7 @@ jobs:
         run: docker build -t build_image -f BlogKjellCoppin/Dockerfile_build BlogKjellCoppin
 
       - name: run build container
-        run: docker run -rm -v $(pwd):/app -w /app build_image
+        run: docker run --rm -v $(pwd):/app -w /app build_image
 
       - name: check1
         run: ls
