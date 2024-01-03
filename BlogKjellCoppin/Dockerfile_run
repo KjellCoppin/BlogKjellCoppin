@@ -1,5 +1,5 @@
 # Use the aspnet runtime image for 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0-focal-arm64v8 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
 WORKDIR /app
 
 # Copy the published output from the build container
