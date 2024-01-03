@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
 WORKDIR /app
 
 # Copy the published output from the build container
-COPY ./publish .
+COPY . .
 
 # Set the entry point for the application
-ENTRYPOINT ["dotnet", "LinuxWebTest.dll"]
+ENTRYPOINT ["dotnet", "BlogKjellCoppin.dll"]
