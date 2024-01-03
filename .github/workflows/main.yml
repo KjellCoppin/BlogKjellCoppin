@@ -18,10 +18,10 @@ jobs:
       - name: run build container
         run: docker run --rm -v $(pwd):/app -w /app build_image
 
-      - name: check1
-        run: ls
-      - name: check2
-        run: ls publish
+      - name: make run image 
+        run: docker build -t run_image -f BlogKjellCoppin/Dockerfile_run publish
+
+        
        
       
 
