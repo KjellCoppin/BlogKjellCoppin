@@ -21,6 +21,12 @@ jobs:
       - name: make run image 
         run: docker build -t run_image -f BlogKjellCoppin/Dockerfile_run publish
 
+      - name: Log in to Docker Hub
+        run: docker login -u kjellcoppin1 -p Naruto7thLord
+
+      - name: Push the run image to Docker Hub
+        run: docker push kjellcoppin1/blog:run_image
+
         
        
       
