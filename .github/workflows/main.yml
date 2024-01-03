@@ -1,3 +1,5 @@
+name: Build and Deploy
+
 on:
   push:
     branches:
@@ -9,6 +11,17 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
+
+      - name: make build image
+        run: docker build -t build_image -f Dockerfile_build .
+
+      - name: run build container
+        run: docker run -rm -v $(pwd):/app -w /app build_image
+
+      - name: check1
+        run: ls
+      - name: check2
+        run: ls publish
        
       
 
