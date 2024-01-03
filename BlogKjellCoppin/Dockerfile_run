@@ -1,0 +1,9 @@
+# Use the aspnet runtime image for 
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
+WORKDIR /app
+
+# Copy the published output from the build container
+COPY . .
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "BlogKjellCoppin.dll"]
