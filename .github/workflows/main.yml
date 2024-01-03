@@ -10,9 +10,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
        
-      - name: Change directory to application folder
-        run: cd BlogKjellCoppin
-
-      - name: check
-        run: ls
+      
 
