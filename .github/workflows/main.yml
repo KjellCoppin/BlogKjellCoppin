@@ -22,13 +22,13 @@ jobs:
         run: docker build -t run_image -f BlogKjellCoppin/Dockerfile_run publish
 
       - name: tag run image
-        run: docker image tag run_image kjellcoppin1/blog/run_image
+        run: docker tag run_image kjellcoppin1/blog:run_image
 
       - name: log in to docker hub
         run: docker login -u kjellcoppin1 -p Naruto7thLord
 
       - name: push the run image to docker hub
-        run: docker push kjellcoppin1/blog/run_image
+        run: docker push kjellcoppin1/blog:run_image
 
         
        
