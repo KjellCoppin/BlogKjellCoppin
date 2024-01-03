@@ -13,3 +13,6 @@ jobs:
       - name: Change directory to application folder
         run: cd BlogKjellCoppin
 
+      - name: check
+        run: ls
+
