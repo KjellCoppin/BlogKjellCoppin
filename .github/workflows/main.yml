@@ -7,10 +7,9 @@ jobs:
     name: build and run
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v4
+      - name: checkout repo
+      - uses: actions/checkout@v4
        
-       - name: move into project
-         run: cd BlogKjellCoppin
+      - name: Change directory to application folder
+        run: cd BlogKjellCoppin
 
-       - name: ls
-         run: ls
