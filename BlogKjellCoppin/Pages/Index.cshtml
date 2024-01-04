@@ -125,10 +125,16 @@
             <main class="col-md-10 main-content">
                 <h1 class="mt-4">Modern Blog</h1>
                 <hr />
-                @foreach (var post in Model.Posts)
+                @foreach (var post in Model._repo.Posts)
                 {
                     <div class="post">
                         <h2 class="mt-4">@post.Title</h2>
+                        @foreach (var bitmap in post.Images)
+                        {
+                            var imageBase64 = Model.ConvertBitmapToBase64(bitmap);
+                            <img src="data:image/png;base64, @imageBase64" alt="Post Image" class="img-fluid mb-3" />
+                        }
+
                         <p>@post.PublishDate.ToString("MMMM dd, yyyy")</p>
                         <hr />
                         <p>@Html.Raw(post.Content)</p>
