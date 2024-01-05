@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Hosting;
+using SkiaSharp;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BlogKjellCoppin.Pages
@@ -23,13 +24,13 @@ namespace BlogKjellCoppin.Pages
             
         }
 
-        internal string ConvertBitmapToBase64(System.Drawing.Bitmap bitmap)
+        public string ConvertSKBitmapToBase64(SKBitmap skBitmap)
         {
-            using (MemoryStream ms = new MemoryStream())
+            using (var image = SKImage.FromBitmap(skBitmap))
+            using (var data = image.Encode(SKEncodedImageFormat.Png, 100))
             {
-                bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                byte[] imageBytes = ms.ToArray();
-                return Convert.ToBase64String(imageBytes);
+                byte[] byteArray = data.ToArray();
+                return Convert.ToBase64String(byteArray);
             }
         }
     }

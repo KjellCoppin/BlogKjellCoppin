@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace BlogKjellCoppin.Data
+﻿namespace BlogKjellCoppin.Data
 {
     public class MockRepository : IRepository
     {
