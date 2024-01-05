@@ -1,7 +1,7 @@
-﻿using System.Drawing;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System;
+using SkiaSharp;
 
 namespace BlogKjellCoppin.Data
 {
@@ -11,10 +11,10 @@ namespace BlogKjellCoppin.Data
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
         public string Content { get; set; }
-        public List<Bitmap> Images { get; set; }
+        public List<SKBitmap> Images { get; set; }
         public bool FullText { get; set; } = false;
 
-        public Post(int id, string title, DateTime publishDate, string content, List<Bitmap> images)
+        public Post(int id, string title, DateTime publishDate, string content, List<SKBitmap> images)
         {
             Id = id;
             Title = title;

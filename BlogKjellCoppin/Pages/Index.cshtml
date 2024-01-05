@@ -146,7 +146,7 @@
                                 <div class="carousel-inner">
                                     @for (int i = 0; i < post.Images.Count; i++)
                                     {
-                                        var imageBase64 = Model.ConvertBitmapToBase64(post.Images[i]);
+                                        var imageBase64 = Model.ConvertSKBitmapToBase64(post.Images[i]);
                                         var activeClass = i == 0 ? "active" : "";
                                         <div class="carousel-item @activeClass">
                                             <img src="data:image/png;base64, @imageBase64" alt="Post Image" class="d-block w-100" />

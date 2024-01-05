@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿using SkiaSharp;
 
 namespace BlogKjellCoppin.Data
 {
@@ -16,7 +16,7 @@ namespace BlogKjellCoppin.Data
                 " with your friend group.<br><br> I took charge of crafting the backend, utilizing ASP.NET Web API and Entity Framework." +
                 " This challenge allowed me to put my .Net skills to practice once more and grow as a developer. I'm immensely" +
                 " proud of what we accomplished in such a short span, and I look forward to taking on more challenges like this. ",
-                new List<Bitmap> { new Bitmap(@"./Data/MockImages/OHHackaton1.JPG"), new Bitmap(@"./Data/MockImages/OHHackaton2.png") }),
+                new List<SKBitmap> { SKBitmap.Decode(@"./Data/MockImages/OHHackaton1.JPG"), SKBitmap.Decode(@"./Data/MockImages/OHHackaton2.png") }),
 
                 new Post(1, "My Semester in Austria", new DateTime(2024, 1, 1, 12, 0, 0), "This is the story of my exiting Erasmus Semester.<br><br>" +
                 "Embarking on my Erasmus semester was something I had planned on for quite some time, and I couldn't have chosen a better destination than Austria." +
@@ -44,8 +44,8 @@ namespace BlogKjellCoppin.Data
                 " friends was difficult, but the personal growth I achieved during my time in Austria was undeniably worth it.\r\nIn retrospect, my Erasmus" +
                 " semester at Fachhochschule Vorarlberg was more than just an academic endeavor—it was an adventure that enriched my understanding of both" +
                 " computer science and the world around me.\r\n"
-                , new List<Bitmap> { new Bitmap(@"./Data/MockImages/Erasmus1.jpg"),
-                    new Bitmap(@"./Data/MockImages/Erasmus2.jpg"), new Bitmap(@"./Data/MockImages/Erasmus3.jpg" )}),
+                , new List<SKBitmap> { SKBitmap.Decode(@"./Data/MockImages/Erasmus1.jpg"),
+                  SKBitmap.Decode(@"./Data/MockImages/Erasmus2.jpg"), SKBitmap.Decode(@"./Data/MockImages/Erasmus3.jpg" )}),
             };
 
             Posts = Posts.OrderByDescending(post => post.PublishDate).ToList();
