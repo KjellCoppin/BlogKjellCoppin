@@ -5,7 +5,5 @@ WORKDIR /app
 # Copy the published output from the build container
 COPY . .
 
-RUN apt-get update && apt-get install -y libharfbuzz-dev libfreetype6
-
 # Set the entry point for the application
 ENTRYPOINT ["dotnet", "BlogKjellCoppin.dll"]
